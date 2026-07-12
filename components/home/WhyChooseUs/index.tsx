@@ -49,11 +49,11 @@ export default function WhyChooseUs() {
           <div>
 
             <Image
-              src="/images/why-us.jpg"
+              src="/images/property1.jpg"
               alt="Why Choose Us"
               width={700}
               height={800}
-              className="rounded-[32px] object-cover shadow-2xl"
+              className="rounded-4xl object-cover shadow-2xl"
             />
 
           </div>

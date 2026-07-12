@@ -10,7 +10,7 @@ export default function Hero() {
     min-h-140
     bg-cover
     bg-center
-    bg-[url('/images/hero.jpg')]
+    bg-[url('/images/Hero.jpg')]
 "
 >
       <div className="absolute inset-0 bg-slate-900/55"></div>
