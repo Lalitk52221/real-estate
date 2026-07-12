@@ -4,7 +4,7 @@ import { categories } from "./data";
 
 export default function Categories() {
   return (
-    <section className="py-32">
+    <section className="py-32 mt-60  md:my-0">
       <Container>
 
         <div className="mb-14 flex items-end justify-between">
@@ -27,7 +27,7 @@ export default function Categories() {
 
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-3 gap-8 lg:grid-cols-5">
           {categories.map((item) => (
             <CategoryCard
               key={item.title}

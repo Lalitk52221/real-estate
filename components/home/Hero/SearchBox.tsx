@@ -3,7 +3,7 @@ import Tabs from "./Tabs";
 
 export default function SearchBox() {
   return (
-    <div className="absolute -bottom-6 left-1/2 w-full max-w-6xl -translate-x-1/2">
+    <div className="absolute -bottom-70 md:-bottom-6 left-1/2 w-full max-w-6xl -translate-x-1/2">
 
       <Tabs />
 
