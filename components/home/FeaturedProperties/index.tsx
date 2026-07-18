@@ -1,14 +1,18 @@
+"use client"
+import {motion} from "framer-motion"
 import Container from "@/components/layout/Container";
 import PropertyCard from "./PropertyCard";
 import { properties } from "./properties";
 
 export default function FeaturedProperties() {
   return (
-    <section className="bg-[#081625] py-24">
+    <section className="bg-[#081625] py-15">
 
       <Container>
 
-        <div className="mb-14 flex items-center justify-between">
+        <motion.div 
+        initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5}}
+        className="mb-14 flex items-center justify-between">
 
           <div>
 
@@ -26,18 +30,26 @@ export default function FeaturedProperties() {
             View All
           </button>
 
-        </div>
+        </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-4 xl:grid-cols-4">
+        <motion.div 
+        initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+        className="grid gap-8 md:grid-cols-4 xl:grid-cols-4">
 
-          {properties.map((property) => (
-            <PropertyCard
+          {properties.map((property,i) => (
+            <motion.div
+              initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
               key={property.id}
+            >
+
+            <PropertyCard
+              
               property={property}
-            />
+              />
+              </motion.div>
           ))}
 
-        </div>
+        </motion.div>
 
       </Container>
 

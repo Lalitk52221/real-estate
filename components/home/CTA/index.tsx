@@ -3,7 +3,7 @@ import Container from "@/components/layout/Container";
 
 export default function CTA() {
   return (
-    <section className="bg-linear-to-r from-blue-700 to-blue-900 py-24">
+    <section className="bg-linear-to-r from-blue-700 to-blue-900 py-18">
       <Container>
         <div className="mx-auto max-w-4xl text-center text-white">
 

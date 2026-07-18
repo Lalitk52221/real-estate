@@ -4,7 +4,7 @@ import { testimonials } from "./testimonials";
 
 export default function Testimonials() {
   return (
-    <section className="bg-slate-50 py-24">
+    <section className="bg-slate-50 py-15">
       <Container>
 
         <div className="mb-14 text-center">
