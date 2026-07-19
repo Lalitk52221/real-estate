@@ -38,6 +38,7 @@ export default function PropertyGallery() {
                 alt="Property"
                 fill
                 priority
+                loading="eager"
                 className="object-cover"
               />
             </motion.div>
@@ -74,6 +75,7 @@ export default function PropertyGallery() {
               src={image}
               alt={`Thumbnail ${index + 1}`}
               fill
+              loading="eager"
               className="object-cover"
             />
 

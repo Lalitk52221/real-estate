@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Pagination() {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const totalPages = 8;
+  const totalPages = 4;
 
   const pages = Array.from(
     { length: totalPages },
@@ -14,14 +14,14 @@ export default function Pagination() {
   );
 
   return (
-    <div className="mt-10 flex flex-col items-center justify-between gap-6 border-t border-slate-200 pt-8 md:flex-row">
+    <div className="w-full mt-10 flex flex-col items-center justify-between gap-6 border-t border-slate-200 pt-8 md:flex-row">
 
       {/* Showing Result */}
 
       <p className="text-sm text-slate-500">
         Showing
         <span className="mx-1 font-semibold text-slate-900">
-          1–8
+          1–7
         </span>
         of
         <span className="mx-1 font-semibold text-slate-900">
