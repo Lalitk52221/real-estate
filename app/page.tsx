@@ -8,6 +8,7 @@ import Testimonials from "@/components/home/Testimonials";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Testimonials/>
       <CTA/>
       <Footer/>
+      <WhatsAppFloat/>
 
     </>
   );

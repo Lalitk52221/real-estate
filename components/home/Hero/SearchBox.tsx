@@ -40,6 +40,9 @@ export default function SearchBox() {
 
             <select className="w-full rounded-md border border-slate-300 p-3">
               <option>All Type</option>
+              <option>Residential</option>
+              <option>Commercial</option>
+              <option>Industrial</option>
             </select>
           </div>
 
@@ -48,6 +51,10 @@ export default function SearchBox() {
 
             <select className="w-full rounded-md border border-slate-300 p-3">
               <option>Any Budget</option>
+              <option>₹5,00,000 - ₹10,00,000</option>
+              <option>₹10,00,000 - ₹20,00,000</option>
+              <option>₹20,00,000 - ₹50,00,000</option>
+              <option>₹5,00,000+</option>
             </select>
           </div>
 

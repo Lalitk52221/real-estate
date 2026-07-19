@@ -35,6 +35,7 @@
 // }
 
 "use client"
+import Container from "@/components/layout/Container";
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import {stats} from './stats'
@@ -65,14 +66,15 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   const v = useCounter(value, inView)
   return <span ref={ref}>{v.toLocaleString()}{suffix}</span>
 }
-export default function Infrastructure() {
+export default function statistics() {
   return (
-    <section id="infrastructure" className="relative py-15 bg-blue-900 text-white overflow-hidden">
+    
+    <section id="statistics" className="relative py-15 bg-blue-900 text-white overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none"><defs><pattern id="g" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="0.2"/></pattern></defs><rect width="100%" height="100%" fill="url(#g)" /></svg>
       </div>
       <div className="relative max-w-7xl mx-auto px-5 lg:px-8">
-        <motion.h3 initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} className="text-center text-sm font-bold tracking-[0.3em] mb-10">OUR INFRASTRUCTURE</motion.h3>
+       
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-5">
           {stats.map((it, i) => {
             const Icon = it.icon
@@ -90,7 +92,8 @@ export default function Infrastructure() {
             );
           })}
         </div>
-      </div>ī
+      </div>
     </section>
+    
   )
 }

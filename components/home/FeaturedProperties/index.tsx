@@ -6,7 +6,7 @@ import { properties } from "./properties";
 
 export default function FeaturedProperties() {
   return (
-    <section className="bg-[#081625] py-15">
+    <section className="bg-blue-900 py-15">
 
       <Container>
 
@@ -34,7 +34,7 @@ export default function FeaturedProperties() {
 
         <motion.div 
         initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-        className="grid gap-8 md:grid-cols-4 xl:grid-cols-4">
+        className="grid gap-5 md:grid-cols-4 xl:grid-cols-4">
 
           {properties.map((property,i) => (
             <motion.div
