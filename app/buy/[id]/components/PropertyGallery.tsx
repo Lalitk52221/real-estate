@@ -2,29 +2,26 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-  "/properties/property-1.jpg",
-  "/properties/property-2.jpg",
-  "/properties/property-3.jpg",
-  "/properties/property-4.jpg",
+  "/images/property1.jpg",
+  "/images/property2.jpg",
+  "/images/property3.jpg",
+  "/images/property4.jpg",
 ];
 
-export default function PropertyGallery() {
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+export default function PropertyGallery({ image, propertyId }: { image?: string; propertyId?: number }) {
+  const [selectedImage, setSelectedImage] = useState(image || images[0]);
 
   return (
     <div className="grid grid-cols-12 gap-4">
-
       {/* Main Image */}
 
       <div className="col-span-12 lg:col-span-9">
-
         <div className="relative h-130 overflow-hidden rounded-3xl">
-
           <AnimatePresence mode="wait">
-
             <motion.div
               key={selectedImage}
               initial={{ opacity: 0, scale: 1.04 }}
@@ -33,26 +30,35 @@ export default function PropertyGallery() {
               transition={{ duration: 0.35 }}
               className="absolute inset-0"
             >
-              <Image
-                src={selectedImage}
-                alt="Property"
-                fill
-                priority
-                loading="eager"
-                className="object-cover"
-              />
+              {propertyId ? (
+                <Link href={`/buy/${propertyId}/image?img=${encodeURIComponent(selectedImage)}`} className="absolute inset-0 block">
+                  <Image
+                    src={selectedImage}
+                    alt="Property"
+                    fill
+                    priority
+                    loading="eager"
+                    className="object-cover cursor-zoom-in"
+                  />
+                </Link>
+              ) : (
+                <Image
+                  src={selectedImage}
+                  alt="Property"
+                  fill
+                  priority
+                  loading="eager"
+                  className="object-cover"
+                />
+              )}
             </motion.div>
-
           </AnimatePresence>
-
         </div>
-
       </div>
 
       {/* Right Thumbnails */}
 
       <div className="col-span-12 flex gap-4 lg:col-span-3 lg:flex-col">
-
         {images.slice(1).map((image, index) => (
           <button
             key={index}
@@ -98,12 +104,9 @@ export default function PropertyGallery() {
                 +12 Photos
               </div>
             )}
-
           </button>
         ))}
-
       </div>
-
     </div>
   );
 }

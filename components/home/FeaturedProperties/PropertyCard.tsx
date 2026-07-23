@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Bath, BedDouble, Heart, MapPin, Ruler } from "lucide-react";
+import Link from "next/link";
 
 interface PropertyCardProps {
   property: {
@@ -22,13 +23,15 @@ export default function PropertyCard({ property }: PropertyCardProps) {
       {/* Image */}
 
       <div className="relative overflow-hidden">
+        <Link href={`/buy/${property.id}`} >
         <Image
           src={property.image}
           alt={property.title}
           width={600}
           height={450}
           className="h-60 w-full object-cover transition duration-500 group-hover:scale-110"
-        />
+          />
+          </Link>
 
         {/* Featured Badge */}
 
